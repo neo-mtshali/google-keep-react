@@ -1,0 +1,157 @@
+/* src/components/Navbar/Navbar.css */
+/* General Navigation Styles */
+.nav,
+.nav-left,
+.nav-right,
+.logo-menu,
+.search-area form,
+.icons,
+.apps-profile,
+.google-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar.css */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.logo-menu {
+  padding: 0 30px 0 0;
+}
+
+.menu-icon {
+  margin: 0 4px;
+}
+
+.logo {
+  height: 44px;
+  width: 40px;
+}
+
+.logo-text {
+  font-size: 22px;
+  color: #5e5e5e;
+  padding: 0 0 0 8px;
+}
+
+.nav-icon {
+  padding: 8px;
+  border-radius: 50%;
+  color: #5f6367;
+}
+
+.nav-icon:hover {
+  background-color: #f0f2f3;
+  cursor: pointer;
+}
+
+.search-area {
+  padding: 0 0 0 60px;
+  max-width: 1300px;
+  width: 140px;
+}
+
+.search-area form {
+  background-color: #f0f2f3;
+  display: flex;
+  justify-content: flex-start;
+  width: 722px;
+  border-radius: 8px;
+}
+
+.search-area form input {
+  background-color: #f0f2f3;
+  outline: none;
+  border: none;
+  height: 42px;
+  padding: 11px 0;
+  font-size: 16px;
+  width: 615px;
+}
+
+.search-area form input:focus {
+  outline: none;
+}
+
+.search-area form button {
+  border: none; 
+  margin: 4px;
+  padding: 0 5px;
+  border-radius: 50px;
+}
+
+.search-icon {
+  border-radius: 50px;
+  padding: 8px;
+  color: #5f6367;
+}
+
+.search-icon:hover {
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+.apps-profile {
+  display: flex;
+  align-items: center;
+}
+
+.google-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+.google-logo {
+  width: 85px;
+  height: 25px;
+}
+
+.profile-icon {
+  font-size: 24px;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 125%;
+  font-size: 0.8rem;
+  background-color: #323232;
+  color: #fff;
+  opacity: 0.8;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 5px;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}

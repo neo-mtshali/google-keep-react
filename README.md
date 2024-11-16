@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# Google Keep Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simplified version of Google Keep built using React.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+- [Usage](#usage)
+  - [Creating a Note](#creating-a-note)
+  - [Editing a Note](#editing-a-note)
+  - [Archiving and Unarchiving Notes](#archiving-and-unarchiving-notes)
+- [Project Structure](#project-structure)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a simplified clone of Google Keep, allowing users to create, edit, archive, and display notes. The application focuses on React development skills, including component structuring, state management with hooks, prop drilling, and JSX best practices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Create and Add Notes**: Users can create new notes with titles and content.
+- **Edit Notes**: Existing notes can be edited through a modal interface.
+- **Archive and Unarchive Notes**: Notes can be archived to keep the workspace organized.
+- **Responsive Design**: The layout adapts to different screen sizes for optimal user experience.
+- **Interactive Elements**: Tooltips and modals enhance user interaction.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: For building the user interface.
+- **JavaScript (ES6+)**: Modern JavaScript features.
+- **HTML5 & JSX**: Markup and component structure.
+- **CSS3**: Styling of components.
+- **Material Symbols**: For icons (loaded via Google Fonts)
+- **Create React App**: Bootstrapping the React project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** (version 14 or above)
+- **npm** or **yarn**
+- A modern web browser (e.g., Chrome, Firefox, Edge, Safari)
+- A text editor or IDE (e.g., Visual Studio Code) for viewing or modifying the code
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository** to your local machine using Git:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/yourusername/google-keep-clone.git
+   ```
+2. **Navigate** to the project directory:
+  ```bash
+  cd google-keep-clone
+  ```
+3. **Install dependencies:**
+  ```bash
+  npm install
+  ```
+### Running the Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Start** the development server:
+  ```bash
+  npm start
+  ```
+2. **Open** your web browser and navigate to http://localhost:3000.
+  + The application should now be running locally.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Usage
 
-## Learn More
+## Creating a Note
+1. Click on the **"Take a note..."** input field to open the active form.
+2. Enter a title and/or text for your note.
+3. Click the **Close** button or outside the form to save the note.
+4. The note will appear in the **Notes** section.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Editing a Note
+1. Click on an existing note to open it in a modal window.
+2. Modify the title and/or text in the modal.
+3. Click the **Close** button or outside the modal to save changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Archiving and Unarchiving Notes
+### Archive a Note:
+1. Click the **Archive** icon on a note to archive it.
+2. The note will be moved to the **Archived Notes** section.
 
-### Code Splitting
+### View Archived Notes:
+1. Click on the **Archive** item in the sidebar.
+2. Archived notes will be displayed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Unarchive a Note:
+1. In the **Archived Notes** view, click the **Unarchive** icon on a note to move it back to active notes.
 
-### Analyzing the Bundle Size
+# Project Structure
+google-keep-clone/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Form/
+│   │   │   ├── Form.js
+│   │   │   └── Form.css
+│   │   ├── Modal/
+│   │   │   ├── Modal.js
+│   │   │   └── Modal.css
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.js
+│   │   │   └── Navbar.css
+│   │   ├── Notes/
+│   │   │   ├── Notes.js
+│   │   │   └── Notes.css
+│   │   ├── Note/
+│   │   │   ├── Note.js
+│   │   │   └── Note.css
+│   │   └── Sidebar/
+│   │       ├── Sidebar.js
+│   │       └── Sidebar.css
+│   ├── App.js
+│   └── App.css
+├── package.json
+├── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### File Descriptions
+- **public/index.html**: The main HTML file containing the application's root element and CDN links.
+- **App.js / App.css**: The main application component and its styles.
+- **components/**: Contains all reusable components used in the application.
+  - **Navbar/**: The top navigation bar.
+  - **Sidebar/**: The side menu with navigation items.
+  - **Form/**: The form for adding new notes (both inactive and active states).
+  - **Notes/**: The container displaying all notes.
+  - **Note/**: Individual note component.
+  - **Modal/**: The modal window for editing notes.
+- **package.json**: Contains project metadata and dependencies.
+- **README.md**: Documentation for the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Acknowledgments
+- **Google Keep**: Inspiration for the project.
+- **Material Symbols**: Icons used in the application.
+- **Create React App**: For bootstrapping the React project.
+- **MDN Web Docs**: For valuable resources and documentation.
+- **React Documentation**: For guidance on React best practices.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Note**: This project is for educational purposes and is not an exact replica of Google Keep. It aims to practice and demonstrate React development skills using components, state management, and hooks.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you!

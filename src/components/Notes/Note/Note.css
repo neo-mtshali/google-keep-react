@@ -1,0 +1,81 @@
+/* src/components/Note/Note.css */
+.note {
+  width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.note:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.note-content {
+  margin-bottom: 8px;
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-footer-icons {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  font-size: 18px;
+  padding: 8px;
+  margin: 0 2px;
+  cursor: pointer;
+  color: #5f6367;
+}
+
+.footer-icon:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+
+/* Pop-up Menu Styles */
+.more-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.more-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.more-menu {
+  position: absolute;
+  top: 30px;
+  right: -100;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  width: 160px;
+  padding: 8px 0;
+}
+
+.menu-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #202124;
+}
+
+.menu-item:hover {
+  background-color: #f1f3f4;
+}
+
+
