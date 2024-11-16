@@ -155,3 +155,13 @@
 .tooltip:hover .tooltip-text {
   visibility: visible;
 }
+
+@media (max-width: 767px) {
+  .nav-left {
+    flex-grow: 1;
+  }
+
+  .search-area {
+    display: none; /* Hide search bar on very small screens */
+  }
+}

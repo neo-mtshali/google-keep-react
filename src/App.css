@@ -1,8 +1,16 @@
+/* App.css */
 
-.app {
-  font-family: 'Roboto', sans-serif;
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
+/* Container and Main Content */
 .container {
   display: flex;
   margin-top: 65px; /* Adjust for navbar height */
@@ -10,9 +18,71 @@
 
 .main-content {
   flex-grow: 1;
-  margin-left: 280px; /* Same as sidebar width */
+  margin-left: 240px; /* Adjusted to match sidebar width */
   padding: 16px;
-  overflow-y: auto;
+  overflow: visible; /* Allow the pop-up to be displayed fully */
+}
+
+/* Media Queries */
+
+/* For screens 1024px and above */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 240px; /* Fixed width for sidebar */
+    position: fixed;
+    top: 65px; /* Adjust for navbar height */
+    left: 0;
+    height: calc(100% - 65px);
+    overflow-y: auto;
+  }
+
+  .main-content {
+    margin-left: 240px; /* Space for the sidebar */
+  }
+}
+
+/* For screens between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 200px; /* Slightly narrower sidebar */
+    position: fixed;
+    top: 65px;
+    left: 0;
+    height: calc(100% - 65px);
+    overflow-y: auto;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+/* For screens 767px and below */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
 }
 
 

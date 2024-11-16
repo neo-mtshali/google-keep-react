@@ -1,6 +1,7 @@
 /* src/components/Note/Note.css */
 .note {
-  width: 300px;
+  width: 240px;
+  height: 110px;
   border: 1px solid lightgray;
   border-radius: 8px;
   padding: 8px;
@@ -26,8 +27,10 @@
 
 .note-footer-icons {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+
 
 .footer-icon {
   font-size: 18px;

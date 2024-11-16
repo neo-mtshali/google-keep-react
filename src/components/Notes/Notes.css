@@ -8,3 +8,25 @@
   width: 100%;
 }
 
+.note {
+  flex: 1 1 calc(25% - 16px); /* 4 columns */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .note {
+    flex: 1 1 calc(33.33% - 16px); /* 3 columns */
+}
+}
+
+@media (max-width: 767px) {
+  .note {
+    flex: 1 1 calc(50% - 16px); /* 2 columns */
+}
+}
+
+@media (max-width: 480px) {
+  .note {
+    flex: 1 1 100%; /* 1 column */
+  }
+}

@@ -53,7 +53,10 @@ function App() {
   };
 
   const deleteNote = (id) => {
-    setArchivedNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
+    setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
+    setArchivedNotes((prevArchivedNotes) =>
+      prevArchivedNotes.filter((note) => note.id !== id)
+    );
   };
 
   const openModal = (note) => {
@@ -78,23 +81,35 @@ return (
   <div className="app">
     <Navbar />
     <div className="container">
-      <Sidebar toggleArchivedNotes={toggleArchivedNotes} showArchived={showArchived} />
+      <Sidebar
+        toggleArchivedNotes={toggleArchivedNotes}
+        showArchived={showArchived}
+      />
       <div className="main-content">
         <Form addNote={addNote} />
         {!showArchived ? (
-          <Notes notes={notes} openModal={openModal} archiveNote={archiveNote} />
+          // Active notes view
+          <Notes
+            notes={notes}
+            openModal={openModal}
+            archiveNote={archiveNote}
+            unarchiveNote={unarchiveNote}
+            deleteNote={deleteNote} // Pass deleteNote here
+            isArchivedView={false}
+          />
         ) : (
+          // Archived notes view
           <Notes
             notes={archivedNotes}
             openModal={openModal}
-            archiveNote={unarchiveNote}
-            deleteNote={deleteNote}
+            archiveNote={archiveNote}
+            unarchiveNote={unarchiveNote}
+            deleteNote={deleteNote} // Pass deleteNote here
             isArchivedView={true}
           />
         )}
       </div>
     </div>
-    {/* Always render the Modal component */}
     <Modal
       selectedNote={selectedNote}
       isOpen={isModalOpen}
@@ -102,11 +117,10 @@ return (
       editNote={editNote}
       archiveNote={archiveNote}
       unarchiveNote={unarchiveNote}
-      deleteNote={deleteNote}
+      deleteNote={deleteNote} // Pass deleteNote here
     />
   </div>
 );
-
 }
 
 export default App;

@@ -53,7 +53,7 @@ This project is a simplified clone of Google Keep, allowing users to create, edi
 1. **Clone the repository** to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/google-keep-clone.git
+   git clone https://github.com/yourusername/google-keep-react.git
    ```
 2. **Navigate** to the project directory:
   ```bash
